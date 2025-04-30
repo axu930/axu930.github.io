@@ -6,19 +6,30 @@ date:   2025-04-30
 permalink: /learning/test
 ---
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" 
-        type="text/javascript">
-</script>
-
-
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 # Test Header
 Learning template post. This is where I plan to document papers that I've read and things I've learned. The goal will be to read some collection of papers and blog posts and give an overview of the landscape for something (ML, stats, math, etc.). Hopefully someone will find this useful. 
 
 ## Test Subheader
-Test of math capabilities $ a^2 + b^2 = c^2 $ inline math, and
+Test of math capabilities $$ a^2 + b^2 = c^2 $$ inline math, and
 
 $$ \sum_{n=0}^\infty \frac{1}{n} = \infty $$
 
 for centered math.
 
+## Test Subheader 2 
+
+```Python
+print("Hello World")
+```
+
+
+<script src="https://utteranc.es/client.js"
+        repo="axu930/axu930.github.io"
+        issue-term="pathname"
+        label="comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
