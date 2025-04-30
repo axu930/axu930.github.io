@@ -50,11 +50,11 @@ enable_copy_code_button  : true
 # Site Author
 author:
   name             : "Alex Xu"
-  avatar           : "assets/alex_pic.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "assets/alex_pic.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Math PhD -> ???" #TODO
   location         : "Bay Area"
   email            : "axu202[at]gmail"
-  
+
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
