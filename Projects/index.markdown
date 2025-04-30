@@ -6,4 +6,4 @@ permalink: /projects
 taxonomy: Projects
 ---
 
-Some writing on personal projects I'm working on. 
+Some writing on personal projects I'm working on.  
