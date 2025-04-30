@@ -19,17 +19,9 @@ $$ \sum_{n=0}^\infty \frac{1}{n} = \infty $$
 for centered math.
 
 ## Test Subheader 2 
+Code 
 
 ```Python
 print("Hello World")
 ```
 
-
-<script src="https://utteranc.es/client.js"
-        repo="axu930/axu930.github.io"
-        issue-term="pathname"
-        label="comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>

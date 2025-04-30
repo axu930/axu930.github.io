@@ -6,7 +6,6 @@ date:   2025-04-30
 permalink: /projects/test
 tags: 
 ---
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
 # Test Header
