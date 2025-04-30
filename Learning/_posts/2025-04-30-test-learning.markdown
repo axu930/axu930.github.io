@@ -8,21 +8,21 @@ permalink: /learning/test
 
 
 # Test Header
-Learning template post. This is where I plan to document papers that I've read and things I've learned. The goal will be to read some collection of papers and blog posts and give an overview of the landscape for something (ML, stats, math, etc.). Hopefully someone will find this useful. 
+Project template post. This is where I plan to document personal projects that I'm working on (code or otherwise), including motivations as well as troubleshooting to help me have something to do when I get stuck or bored. Hopefully this helps people try similar things of their own. 
 
 ## Test Subheader
-Test of math capabilities $$ a^2 + b^2 = c^2 $$ inline math, and
+Test of math capabilities: $$ a^2 + b^2 = c^2 $$ inline math, and
 
 $$ \sum_{n=0}^\infty \frac{1}{n} = \infty $$
 
 for centered math.
 
-## Test Subheader 2 
-Code 
+Testing code blocks 
 
 ```Python
-print("Hello World")
+
+x = "Hello World"
+print("x")
+# Hello World
+
 ```
-
-RAHH COMMENTS
-

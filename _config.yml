@@ -109,6 +109,14 @@ defaults:
       author_profile: true
 
 
+# Scripts
+head_scripts:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+footer_scripts:
+
+
+
 comments:
   provider: "utterances"
   utterances:
