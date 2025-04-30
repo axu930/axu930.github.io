@@ -3,6 +3,7 @@ layout: single
 author_profile: true
 title: Home
 classes: wide
+comments: false
 ---
 
 
