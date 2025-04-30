@@ -43,6 +43,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 words_per_minute         : 150
+markdown                 : kramdown
 breadcrumbs              : false  # disabled by default
 breadcrumb_home_label    : "Home"
 breadcrumb_separator     : "/"
