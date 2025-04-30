@@ -105,6 +105,7 @@ defaults:
       share: true
       related: false
       show_date: true
+      page_exerpts : true
 
 
 comments:
