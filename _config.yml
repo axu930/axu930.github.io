@@ -47,13 +47,19 @@ breadcrumb_home_label    : "Home"
 breadcrumb_separator     : "/"
 enable_copy_code_button  : true
 
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+yandex_site_verification :
+naver_site_verification  :
+
+
 # Site Author
 author:
   name             : "Alex Xu"
   avatar           : "assets/alex_pic.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Math PhD -> ???" #TODO
   location         : "Bay Area"
-  email            : "axu202[at]gmail"
 
   links:
     - label: "Website"
