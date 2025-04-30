@@ -2,7 +2,7 @@
 layout: category
 author_profile: true
 title: Projects
-permalink: /Projects
+permalink: /projects
 taxonomy: Projects
 ---
 
