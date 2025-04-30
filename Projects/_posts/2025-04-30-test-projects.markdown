@@ -1,8 +1,8 @@
 ---
-layout: post
+layout: single
+classes: wide
 title:  "Test Project post"
-date:   2025-04-30 14:25:43 -0400
-categories: learning
+date:   2025-04-30 
 ---
 
 # Test Header
