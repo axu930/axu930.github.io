@@ -2,7 +2,7 @@
 layout: category
 author_profile: true
 title: Learning
-permalink: /Learnng
+permalink: /Learning
 taxonomy: Learning
 ---
 
