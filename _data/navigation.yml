@@ -1,0 +1,7 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Learning"
+    url: /Learning
+  - title: "Projects"
+    url: /Projects
