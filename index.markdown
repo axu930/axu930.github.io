@@ -15,6 +15,7 @@ Outside of work, I enjoy bouldering, brewing specialty coffee and tea, baking br
 
 If you want to contact me, send an email to axu930 (at) gmail.com and I’ll do my best to get back to you. In the meatime, feel free to check out my resume below:
 
+
 ## Skills
 
 * **Programming Languages:** Python, Java, C/C++, Rust, PyTorch, Scikit-learn, Numpy, Pandas, Polars
@@ -22,25 +23,34 @@ If you want to contact me, send an email to axu930 (at) gmail.com and I’ll do 
 * **Math and Statistics:** Bayesian Statistics, Variational Inference, Linear Regression, Partial Differential Equations, Riemannian Manifolds
 * **Languages**: English, Chinese
 
+
 ## Experience
 
 #### Columbia University
-**Graduate Student Instructor** <div style="text-align: right"> 2020-2025 </div>
+Graduate Student Instructor
+<div style="text-align: right"> 2020-2025 </div>
 * Created course curriculum and taught biweekly classes for Calculus 1 as the Instructor of Record for a class of 30 students
 * Graduate TA for Calculus and Optimization, Linear Algebra, Calculus 3, Calculus 2, Calculus 1, and Algebraic Topology
 
 
+## Projects
+
+
 ## Education
 
-#### Columbia University <div style="text-align: right"> PhD, Mathematics </div>
-* Advisor: Francesco Lin <div style="text-align: right"> 2025 </div>
+#### Columbia University 
+<div style="text-align: right"> PhD, Mathematics </div>
+* Advisor: Francesco Lin 
+<div style="text-align: right"> 2025 </div>
 * Thesis: The Seiberg—Witten Equations and Asymptotically Hyperbolic Einstein Metrics
 
-#### Columbia University <div style="text-align: right"> MA, Mathematics </div>
-* Advisor: Francesco Lin <div style="text-align: right"> 2022 </div>
+#### Columbia University 
+<div style="text-align: right"> MA, Mathematics </div>
+* Advisor: Francesco Lin 
+<div style="text-align: right"> 2022 </div>
 
-#### University of California, Santa Barbara <div style="text-align: right"> BSc, Mathematics </div>
-* Advisor: Xianzhe Dai <div style="text-align: right"> 2020 </div>
+#### University of California, Santa Barbara
+<div style="text-align: right"> BSc, Mathematics </div>
+* Advisor: Xianzhe Dai 
+<div style="text-align: right"> 2020 </div>
 * Thesis: Adiabatic Limits and Hodge Leray Theory
-
-## Projects
