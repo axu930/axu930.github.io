@@ -136,6 +136,7 @@ defaults:
       show_date: true
       page_exerpts : true
       author_profile: true
+      citation : true
 
 
 # Scripts
