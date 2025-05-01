@@ -4,7 +4,7 @@ classes: wide
 title:  "Test Project post"
 date:   2025-04-30 
 permalink: /projects/test
-tags: 
+tags:  
 ---
 
 
