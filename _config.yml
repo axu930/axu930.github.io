@@ -53,11 +53,16 @@ kramdown:
    math_engine: mathjax
 
 # SEO Related
-google_site_verification : "G-ZT1BSWTY6Q"
+google_site_verification : "8OKELcjpbOqBL_2ZlfzuiJg4cfvhuTAeq6Mkn7viRfw"
 bing_site_verification   :
 yandex_site_verification :
 naver_site_verification  :
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-ZT1BSWTY6Q"
+    anonymize_ip: true # default
 
 # Site Author
 author:
