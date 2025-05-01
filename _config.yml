@@ -187,8 +187,8 @@ include:
   - .htaccess
   - _pages
   - files
-exclude:
   - utils
+exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
