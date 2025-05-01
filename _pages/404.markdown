@@ -1,0 +1,11 @@
+---
+layout: single
+author_profile: true
+title: "Page Not Found"
+classes: wide
+comments: false
+permalink: /404.html
+sitemap: false
+---
+
+Sorry, but the page you were trying to view does not exist.
