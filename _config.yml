@@ -38,13 +38,13 @@ description              : >- # this means to ignore newlines until "baseurl:"
   "A website to document things I'm thinking about and working on"
 baseurl                  : "/" # the subpath of your site, e.g. /blog
 url                      : "https://axu930.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository               : " axu930/axu930.github.io"
+repository               : "axu930/axu930.github.io"
 locale                   : "en-US"
 title_separator          : "|"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-words_per_minute         : 150
+masthead_title           : " " # overrides the website title displayed in the masthead, use " " for no title
+words_per_minute         : 120
 breadcrumbs              : true  # disabled by default
 breadcrumb_home_label    : "Home"
 breadcrumb_separator     : "/"
