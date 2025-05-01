@@ -20,10 +20,9 @@ for centered math.
 
 Testing code blocks 
 
-```Python
-
+~~~ Python
 x = "Hello World"
 print("x")
 # Hello World
+~~~
 
-```
