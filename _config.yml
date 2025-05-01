@@ -91,10 +91,11 @@ author:
   location         : "Bay Area"
 
   # find icons at this link: https://fontawesome.com/icons/
+  # other socials-look in the author field of: https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://axu930.github.io/" # "https://math.columbia.edu/~axu" # "xualex.xyz"
+    #- label: "Website"
+    #  icon: "fas fa-fw fa-link"
+    #  url: "https://axu930.github.io/" # "https://math.columbia.edu/~axu" # "xualex.xyz"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/xu-alex/"
@@ -187,6 +188,7 @@ include:
   - _pages
   - files
 exclude:
+  - utils
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
