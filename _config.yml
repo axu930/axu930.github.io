@@ -28,6 +28,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-redirect-from
+  - jemoji
 
 
 # Site settings
@@ -48,13 +50,29 @@ breadcrumb_home_label    : "Home"
 breadcrumb_separator     : "/"
 enable_copy_code_button  : true
 
-markdown                 : kramdown
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
 kramdown:
-   math_engine: mathjax
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: true
+
 
 # SEO Related
 google_site_verification : "8OKELcjpbOqBL_2ZlfzuiJg4cfvhuTAeq6Mkn7viRfw"
-bing_site_verification   :
+bing_site_verification   : 
 yandex_site_verification :
 naver_site_verification  :
 
@@ -62,7 +80,8 @@ analytics:
   provider: "google-gtag"
   google:
     tracking_id: "G-ZT1BSWTY6Q"
-    anonymize_ip: true # default
+    anonymize_ip: true 
+
 
 # Site Author
 author:
@@ -71,13 +90,11 @@ author:
   bio              : "Math PhD -> ???" #TODO
   location         : "Bay Area"
 
+  # find icons at this link: https://fontawesome.com/icons/
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://axu930.github.io/" # "https://math.columbia.edu/~axu" # "xualex.xyz"
-    #- label: "Twitter"
-    #  icon: "fab fa-fw fa-twitter-square"
-    #  url: "https://twitter.com/"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/xu-alex/"
@@ -85,18 +102,21 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/axu930"
 
-# Site Footer
+
+# Site Footer -- changed _includes/footer.html to use links from author in *addition* to these links
+# Add links here that we don't want populating the sidebar
 footer:
   links:
-    #- label: "Twitter"
-    #  icon: "fab fa-fw fa-twitter-square"
-    #  url: "https://twitter.com/"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/xu-alex/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/axu930"
+    - label: "Bluesky"
+      icon: "fa-brands fa-square-bluesky"
+      url: "https://bsky.app/profile/axu930.bsky.social"
+    - label: "Mastodon"
+      icon: "fa-brands fa-mastodon"
+      url: "https://mastodon.social/@axu930"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://x.com/axu930"
+
 
 
 
@@ -124,7 +144,7 @@ head_scripts:
 footer_scripts:
 
 
-
+# Comments section
 comments:
   provider: "giscus"
 
@@ -142,10 +162,6 @@ comments:
     theme                : "dark_dimmed" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
 
 
-
-
-include: 
-    - ["_pages"]
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -165,3 +181,40 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .github
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - CHANGELOG
+  - Capfile
+  - config
+  - Dockerfile
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - local
+  - log
+  - node_modules
+  - package.json*
+  - Rakefile
+  - README
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
