@@ -19,9 +19,10 @@ for centered math.
 
 Testing code blocks 
 
-~~~ Python
-x = "Hello World"
-print("x")
-# Hello World
-~~~
-
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}

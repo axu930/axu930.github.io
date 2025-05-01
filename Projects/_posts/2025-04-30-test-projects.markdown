@@ -20,9 +20,8 @@ for centered math.
 
 Testing code blocks 
 
-~~~ Python
+{% highlight python %}
 x = "Hello World"
 print("x")
 # Hello World
-~~~
-
+{% endhighlight %}
