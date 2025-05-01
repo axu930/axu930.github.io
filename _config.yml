@@ -137,6 +137,7 @@ defaults:
       page_exerpts : true
       author_profile: true
       citation : true
+      pagination : false
 
 
 # Scripts
