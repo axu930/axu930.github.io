@@ -72,5 +72,5 @@ Hey! I'm Alex, and you have arrived at the repo for my github.io website. I hope
 - ["Reminisces of a Stock Market Operator"]()
 - ["Options as a Strategic Investment"]()
 - ["Option Volatility and Pricing"]()
-- ["Market Microstructure for Practitioners"]()
+- ["Market Microstructure for Practitioners"]() 
 
