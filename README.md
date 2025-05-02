@@ -56,7 +56,7 @@ Hey! I'm Alex, and you have arrived at the repo for my github.io website. I hope
 - [KaTeX](https://katex.org/docs/supported.html)
 - [RenderCV](https://docs.rendercv.com/user_guide/)
 - [Mermaid](https://mermaid.js.org) - [live editor](https://mermaid.live/edit)
-- [TikZ](https://tikz.net/) - [tikzit editor](https://tikzit.github.io/)
+- [TikZ](https://tikz.net/) - [tikzit editor](https://tikzit.github.io/) - [tikzJax](https://github.com/drgrice1/tikzjax)
 - [Plotly](https://plotly.com/javascript/) 
 
 

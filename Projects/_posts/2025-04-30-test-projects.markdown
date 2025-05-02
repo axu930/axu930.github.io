@@ -364,17 +364,11 @@ graph TD
 First plot test
 <div  id="tester" style="width:30em" class="plotly-body"></div>
 <script>
-
 	TESTER = document.getElementById('tester');
-
 	Plotly.newPlot( TESTER, [{
-
 	x: [1, 2, 3, 4, 5],
-
 	y: [1, 2, 4, 8, 16] }], {
-
 	margin: { t: 0 } } );
-
 </script>
 
 
@@ -401,6 +395,8 @@ Bubble plot test
 
 
 ## TikZ diagrams
+Work in progress. TODO is to compile and self host a local js file to compile tikz locally.
+
 A circle
 <div style="tikz-body">
 <script type="text/tikz">
@@ -420,4 +416,17 @@ A graph
     \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
     \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
   \end{tikzpicture}
+</script></div>
+
+A commutative diagram
+<div style="tikz-body">
+<script class="tikz-body" type="text/tikz">
+\begin{tikzpicture}[node distance=2cm, auto]
+  \node (C) {$C$};
+  \node (P) [below of=C] {$\prod_{i \in I} A_i$};
+  \node (Ai) [right of=P] {$A_i$};
+  \draw[->] (C) to node {$f_i$} (Ai);
+  \draw[->, dashed] (C) to node [swap] {$\langle f_i \rangle_{i \in I}$} (P);
+  \draw[->] (P) to node [swap] {$\pi_i$} (Ai);
+\end{tikzpicture}
 </script></div>
