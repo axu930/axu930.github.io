@@ -429,9 +429,9 @@ A graph
 </script></div>
 
 A commutative diagram
-<div style="tikz-body">
 <script class="tikz-body" type="text/tikz">
-\begin{tikzpicture}[node distance=2cm, auto]
+\begin{center}
+\begin{tikzpicture}[node distance=2cm, background rectangle/.style={draw=black!15,fill=black!5,rounded corners=1ex}]
   \node (C) {$C$};
   \node (P) [below of=C] {$\prod_{i \in I} A_i$};
   \node (Ai) [right of=P] {$A_i$};
@@ -439,4 +439,5 @@ A commutative diagram
   \draw[->, dashed] (C) to node [swap] {$\langle f_i \rangle_{i \in I}$} (P);
   \draw[->] (P) to node [swap] {$\pi_i$} (Ai);
 \end{tikzpicture}
-</script></div>
+\end{center}
+</script>
