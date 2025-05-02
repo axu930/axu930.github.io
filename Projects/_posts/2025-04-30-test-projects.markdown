@@ -36,6 +36,9 @@ I do not plan to use this blog post for extremely academic purposes, so there is
     *   [Backslash Escapes](#backslash)
     *   [Automatic Links](#autolink)
 *   [Math](#math)
+*   [Mermaid diagrams](#mermaid-diagrams)
+*   [Plotly diagrams](#plotly-diagrams)
+*   [TikZ diagrams](#tikz-diagrams)
 
 
 **Note:** This document is itself written using Markdown; you
@@ -399,18 +402,33 @@ Bubble plot test
 
 ## TikZ diagrams
 A circle
+<div style="tikz-body">
 <script type="text/tikz">
   \begin{tikzpicture}
     \draw (0,0) circle (1in);
   \end{tikzpicture}
-</script>
+</script></div>
 
 A commutative diagram
-<script type="text/tikz">
+<div style="tikz-body">
+<script class="tikz-body" type="text/tikz">
   \begin{tikzcd}
     A \arrow[r, "\phi"] \arrow[d, red]
-      & B \arrow[d, "\psi" red] \\
+       B \arrow[d, "\psi" red] \\
     C \arrow[r, red, "\eta" blue]
-      & |[blue, rotate=-15]| D
+       |[blue, rotate=-15]| D
   \end{tikzcd}
-</script>
+</script></div>
+
+A graph
+<div style="tikz-body">
+<script class="tikz-body" type="text/tikz">
+  \begin{tikzpicture}[domain=0:4]
+    \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
+    \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
+    \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
+    \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
+    \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
+    \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
+  \end{tikzpicture}
+</script></div>
