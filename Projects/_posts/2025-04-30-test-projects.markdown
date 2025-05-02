@@ -7,7 +7,12 @@ permalink: /projects/test
 tags:
 ---
 
-Testing code
+This is the testing page for the project of making this website. I forked the minimal-mistakes jekyll theme in order to do some tweaks, such as
+- Adding more share buttons
+- Fixing comments
+- Adding support for more diagrams
+- Custom header code for resume rendering
+I do not plan to use this blog post for extremely academic purposes, so there is no bibliography section. All citations will be just the hyperlinks.
 
 # Markdown: Syntax
 
@@ -389,4 +394,23 @@ Bubble plot test
         showlegend: false,
         };
         Plotly.newPlot('test2', data);
+</script>
+
+
+## TikZ diagrams
+A circle
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw (0,0) circle (1in);
+  \end{tikzpicture}
+</script>
+
+A commutative diagram
+<script type="text/tikz">
+  \begin{tikzcd}
+    A \arrow[r, "\phi"] \arrow[d, red]
+      & B \arrow[d, "\psi" red] \\
+    C \arrow[r, red, "\eta" blue]
+      & |[blue, rotate=-15]| D
+  \end{tikzcd}
 </script>
