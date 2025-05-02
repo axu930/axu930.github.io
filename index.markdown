@@ -13,6 +13,6 @@ I recently wrapped up my PhD in mathematics at Columbia University, where I was 
 
 Outside of work, I enjoy bouldering, brewing specialty coffee and tea, baking bread, and cooking. I also enjoy playing Pokemon Go. 
 
-If you want to contact me, send an email to axu930 (at) gmail.com and I’ll do my best to get back to you. In the meatime, feel free to check out my resume below. Or view it as a [PDF](/assets/Alex_Xu_CV_2025.pdf).
+If you want to contact me, send an email to axu930 (at) gmail.com and I’ll do my best to get back to you. In the meatime, feel free to check out my resume below. Or view it as a [PDF](/assets/Alex_Xu_CV.pdf).
 
 {% include resume.html %}
