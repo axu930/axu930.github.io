@@ -13,10 +13,10 @@ I recently wrapped up my PhD in mathematics at Columbia University, where I was 
 
 Outside of work, I enjoy bouldering, brewing specialty coffee and tea, baking bread, and cooking. 
 
-If you want to contact me, send an email to axu930 (at) gmail.com and I’ll do my best to get back to you. In the meatime, feel free to check out my resume below:
+If you want to contact me, send an email to axu930 (at) gmail.com and I’ll do my best to get back to you. In the meatime, feel free to check out my [resume](/assets/resume2025.pdf) below:
 
 
-{% include resume.html %}
+{% include resume2025.html %}
 
 ## Skills
 

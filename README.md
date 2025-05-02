@@ -53,7 +53,7 @@ Hey! I'm Alex, and you have arrived at the repo for my github.io website. I hope
 - [git](https://git-scm.com/doc)
 - [markdown](https://www.markdownguide.org/cheat-sheet/)
 - [kramdown](https://kramdown.gettalong.org/quickref.html) 
-- [lwarp](https://ctan.org/pkg/lwarp?lang=en) - Converts LaTeX to html
+- [lwarp](https://ctan.org/pkg/lwarp?lang=en) - Converts LaTeX to HTML
 
 
 ## Mathematics books
