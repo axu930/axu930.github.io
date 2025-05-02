@@ -431,7 +431,7 @@ A graph
 A commutative diagram
 <script class="tikz-body" type="text/tikz">
 \begin{center}
-\begin{tikzpicture}[node distance=2cm, background rectangle/.style={draw=black!15,fill=black!5,rounded corners=1ex}]
+\begin{tikzpicture}[node distance = 2cm, framed, background rectangle/.style={draw=black!15,fill=black!5,rounded corners=1ex}]
   \node (C) {$C$};
   \node (P) [below of=C] {$\prod_{i \in I} A_i$};
   \node (Ai) [right of=P] {$A_i$};
