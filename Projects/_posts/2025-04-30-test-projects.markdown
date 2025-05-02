@@ -16,8 +16,7 @@ I do not plan to use this blog post for extremely academic purposes, so there is
 
 TODO list:
 - Centering for Mermaid graphs
-- Background + centering for TikzJax graphs
-- Self host .js source for TikzJax (no large maintainer community)
+- Get TikZ working--what I had working crashes my phone. 
 
 # Markdown: Syntax
 
@@ -364,7 +363,7 @@ graph TD
 </pre>
 
 sankey graph
-<div class="fig-body">
+<div class="mermaid-body">
 <pre class="mermaid">
 sankey-beta
 
@@ -377,7 +376,7 @@ Pumped heat,"Heating and cooling, ""commercial""",70.672
 ## Plotly diagrams
 
 First plot test
-<div  id="tester" style="width:30em" class="fig-body"></div>
+<div  id="tester" style="width:30em" class="plotly-body"></div>
 <script>
 	TESTER = document.getElementById('tester');
 	Plotly.newPlot( TESTER, [{
@@ -410,38 +409,4 @@ Bubble plot test
 
 
 ## TikZ diagrams
-Work in progress--please send me an email if you know how to get tikz to play well with dark mode. TODO is to compile and self host a local js file to compile tikz locally.
-
-A circle
-<div class="fig-body">
-<script type="text/tikz">
-  \begin{tikzpicture}
-    \draw (0,0) circle (1in);
-  \end{tikzpicture}
-</script></div>
-
-A graph
-<div class="tikz-body">
-<script class="tikz-body" type="text/tikz">
-  \begin{tikzpicture}[domain=0:4]
-    \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
-    \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
-    \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
-    \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
-    \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
-    \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
-  \end{tikzpicture}
-</script></div>
-
-A commutative diagram
-<div style="tikz-body">
-<script class="tikz-body" type="text/tikz">
-\begin{tikzpicture}[node distance=2cm, background rectangle/.style={draw=black!15,fill=black!5,rounded corners=1ex}]
-  \node (C) {$C$};
-  \node (P) [below of=C] {$\prod_{i \in I} A_i$};
-  \node (Ai) [right of=P] {$A_i$};
-  \draw[->] (C) to node {$f_i$} (Ai);
-  \draw[->, dashed] (C) to node [swap] {$\langle f_i \rangle_{i \in I}$} (P);
-  \draw[->] (P) to node [swap] {$\pi_i$} (Ai);
-\end{tikzpicture}
-</script></div>
+Work in progress--please send me an email if you know how to get tikz to play well. 
