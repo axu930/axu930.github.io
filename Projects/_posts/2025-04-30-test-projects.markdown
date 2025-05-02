@@ -14,6 +14,11 @@ This is the testing page for the project of making this website. I forked the mi
 - Custom header code for resume rendering
 I do not plan to use this blog post for extremely academic purposes, so there is no bibliography section. All citations will be just the hyperlinks.
 
+TODO list:
+- Centering for Mermaid graphs
+- Background + centering for TikzJax graphs
+- Self host .js source for TikzJax (no large maintainer community)
+
 # Markdown: Syntax
 
 *   [Overview](#overview)
@@ -359,7 +364,7 @@ graph TD
 </pre>
 
 sankey graph
-<div style="margin: auto">
+<div class="fig-body">
 <pre class="mermaid">
 sankey-beta
 
@@ -372,7 +377,7 @@ Pumped heat,"Heating and cooling, ""commercial""",70.672
 ## Plotly diagrams
 
 First plot test
-<div  id="tester" style="width:30em" class="plotly-body"></div>
+<div  id="tester" style="width:30em" class="fig-body"></div>
 <script>
 	TESTER = document.getElementById('tester');
 	Plotly.newPlot( TESTER, [{
@@ -408,7 +413,7 @@ Bubble plot test
 Work in progress--please send me an email if you know how to get tikz to play well with dark mode. TODO is to compile and self host a local js file to compile tikz locally.
 
 A circle
-<div style="tikz-body">
+<div class="fig-body">
 <script type="text/tikz">
   \begin{tikzpicture}
     \draw (0,0) circle (1in);
@@ -416,7 +421,7 @@ A circle
 </script></div>
 
 A graph
-<div style="tikz-body">
+<div class="tikz-body">
 <script class="tikz-body" type="text/tikz">
   \begin{tikzpicture}[domain=0:4]
     \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
