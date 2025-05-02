@@ -358,6 +358,16 @@ graph TD
     F --> B
 </pre>
 
+sankey graph
+<div style="margin: auto">
+<pre class="mermaid">
+sankey-beta
+
+Pumped heat,"Heating and cooling, ""homes""",193.026
+Pumped heat,"Heating and cooling, ""commercial""",70.672
+</pre>
+</div>
+
 
 ## Plotly diagrams
 
@@ -395,7 +405,7 @@ Bubble plot test
 
 
 ## TikZ diagrams
-Work in progress. TODO is to compile and self host a local js file to compile tikz locally.
+Work in progress--please send me an email if you know how to get tikz to play well with dark mode. TODO is to compile and self host a local js file to compile tikz locally.
 
 A circle
 <div style="tikz-body">
