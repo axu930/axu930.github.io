@@ -53,6 +53,7 @@ Hey! I'm Alex, and you have arrived at the repo for my github.io website. I hope
 - [git](https://git-scm.com/doc)
 - [markdown](https://www.markdownguide.org/cheat-sheet/)
 - [kramdown](https://kramdown.gettalong.org/quickref.html) 
+- [KaTeX](https://katex.org/docs/supported.html)
 - [RenderCV](https://docs.rendercv.com/user_guide/)
 
 ## Mathematics books
