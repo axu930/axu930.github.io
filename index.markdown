@@ -16,6 +16,8 @@ Outside of work, I enjoy bouldering, brewing specialty coffee and tea, baking br
 If you want to contact me, send an email to axu930 (at) gmail.com and I’ll do my best to get back to you. In the meatime, feel free to check out my resume below:
 
 
+{% include resume.html %}
+
 ## Skills
 
 * **Programming Languages:** Python, Java, C/C++, Rust, PyTorch, Scikit-learn, Numpy, Pandas, Polars
@@ -38,7 +40,7 @@ Graduate Student Instructor
 
 ## Education
 
-#### Columbia University 
+#### Columbia University     
 <div style="text-align: right"> PhD, Mathematics </div>
 * Advisor: Francesco Lin 
 <div style="text-align: right"> 2025 </div>

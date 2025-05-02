@@ -51,7 +51,9 @@ Hey! I'm Alex, and you have arrived at the repo for my github.io website. I hope
 - [Scikit-learn](https://scikit-learn.org/stable/api/index.html)
 - [tmux](https://github.com/tmux/tmux/wiki/Getting-Started)
 - [git](https://git-scm.com/doc)
+- [markdown](https://www.markdownguide.org/cheat-sheet/)
 - [kramdown](https://kramdown.gettalong.org/quickref.html) 
+- [lwarp](https://ctan.org/pkg/lwarp?lang=en) - Converts LaTeX to html
 
 
 ## Mathematics books
