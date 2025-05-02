@@ -363,14 +363,12 @@ graph TD
 </pre>
 
 sankey graph
-<div class="mermaid-body">
 <pre class="mermaid">
 sankey-beta
 
 Pumped heat,"Heating and cooling, ""homes""",193.026
 Pumped heat,"Heating and cooling, ""commercial""",70.672
 </pre>
-</div>
 
 
 ## Plotly diagrams
