@@ -16,7 +16,7 @@ I do not plan to use this blog post for extremely academic purposes, so there is
 
 TODO list:
 - Centering for Mermaid graphs
-- Get TikZ working--what I had working crashes my phone. 
+- Get TikZ working--what I had crashes my phone. Note also that since this website is using a dark style, tikz should either have a light colored background or have light lines natively. 
 
 # Markdown: Syntax
 
@@ -44,9 +44,6 @@ TODO list:
 *   [Plotly diagrams](#plotly-diagrams)
 *   [TikZ diagrams](#tikz-diagrams)
 
-
-**Note:** This document is itself written using Markdown; you
-can [see the source for it by adding '.text' to the URL](/projects/markdown/syntax.text).
 
 ----
 
@@ -374,7 +371,7 @@ Pumped heat,"Heating and cooling, ""commercial""",70.672
 ## Plotly diagrams
 
 First plot test
-<div  id="tester" style="width:30em" class="plotly-body"></div>
+<div  id="tester" class="plotly-body"></div>
 <script>
 	TESTER = document.getElementById('tester');
 	Plotly.newPlot( TESTER, [{
@@ -385,7 +382,7 @@ First plot test
 
 
 Bubble plot test
-<div id="test2" style="width:30em" class="plotly-body"></div>
+<div id="test2" class="plotly-body"></div>
 <script>
     var trace1 = {
         x: [1, 2, 3, 4],
