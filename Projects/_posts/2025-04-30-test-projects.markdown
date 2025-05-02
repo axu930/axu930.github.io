@@ -354,7 +354,7 @@ graph TD
 ## Plotly diagrams
 
 First plot test
-<div id="tester" style="width:600px;height:250px;"></div>
+<div id="tester" ></div>
 <script>
 
 	TESTER = document.getElementById('tester');
@@ -371,7 +371,7 @@ First plot test
 
 
 Bubble plot test
-<div id="test2"></div>
+<div id="test2" style="width:40em;height:40em;"></div>
 <script>
     var trace1 = {
         x: [1, 2, 3, 4],
@@ -387,8 +387,6 @@ Bubble plot test
             text: 'Marker Size'
         },
         showlegend: false,
-        height: 600,
-        width: 600
         };
-        Plotly.newPlot('test2', data, layout);
+        Plotly.newPlot('test2', data);
 </script>
