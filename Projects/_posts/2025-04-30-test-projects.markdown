@@ -336,3 +336,62 @@ $$
     \frac{-\partial^2_t \psi_j}{\psi_j} - \frac{\partial_t \phi_j}{\phi_j} \cdot \frac{\partial_t \psi_j}{\psi_j} &\ge -2
 \end{split}
 $$
+
+## Mermaid diagrams
+
+<pre class="mermaid">
+graph TD
+    A[Enter Chart Definition] --> B(Preview)
+    B --> C{decide}
+    C --> D[Keep]
+    C --> E[Edit Definition]
+    E --> B
+    D --> F[Save Image and Code]
+    F --> B
+</pre>
+
+
+## Plotly diagrams
+
+First plot test
+<div id="tester" style="width:600px;height:250px;"></div>
+<script>
+
+	TESTER = document.getElementById('tester');
+
+	Plotly.newPlot( TESTER, [{
+
+	x: [1, 2, 3, 4, 5],
+
+	y: [1, 2, 4, 8, 16] }], {
+
+	margin: { t: 0 } } );
+
+</script>
+
+
+Bubble plot test
+<div id="test2" style="width:600px;height:250px;"></div>
+<script>
+    var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [10, 11, 12, 13],
+  mode: 'markers',
+  marker: {
+    size: [40, 60, 80, 100]
+  }
+};
+
+var data = [trace1];
+
+var layout = {
+  title: {
+    text: 'Marker Size'
+  },
+  showlegend: false,
+  height: 600,
+  width: 600
+};
+
+Plotly.newPlot('test2', data, layout);
+</script>
