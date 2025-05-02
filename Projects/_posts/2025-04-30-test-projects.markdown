@@ -409,17 +409,6 @@ A circle
   \end{tikzpicture}
 </script></div>
 
-A commutative diagram
-<div style="tikz-body">
-<script class="tikz-body" type="text/tikz">
-  \begin{tikzcd}
-    A \arrow[r, "\phi"] \arrow[d, red]
-       B \arrow[d, "\psi" red] \\
-    C \arrow[r, red, "\eta" blue]
-       |[blue, rotate=-15]| D
-  \end{tikzcd}
-</script></div>
-
 A graph
 <div style="tikz-body">
 <script class="tikz-body" type="text/tikz">
