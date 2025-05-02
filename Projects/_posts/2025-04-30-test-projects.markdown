@@ -371,27 +371,24 @@ First plot test
 
 
 Bubble plot test
-<div id="test2" style="width:600px;height:250px;"></div>
+<div id="test2"></div>
 <script>
     var trace1 = {
-  x: [1, 2, 3, 4],
-  y: [10, 11, 12, 13],
-  mode: 'markers',
-  marker: {
-    size: [40, 60, 80, 100]
-  }
-};
-
-var data = [trace1];
-
-var layout = {
-  title: {
-    text: 'Marker Size'
-  },
-  showlegend: false,
-  height: 600,
-  width: 600
-};
-
-Plotly.newPlot('test2', data, layout);
+        x: [1, 2, 3, 4],
+        y: [10, 11, 12, 13],
+        mode: 'markers',
+        marker: {
+            size: [40, 60, 80, 100]
+        }
+        };
+        var data = [trace1];
+        var layout = {
+        title: {
+            text: 'Marker Size'
+        },
+        showlegend: false,
+        height: 600,
+        width: 600
+        };
+        Plotly.newPlot('test2', data, layout);
 </script>
