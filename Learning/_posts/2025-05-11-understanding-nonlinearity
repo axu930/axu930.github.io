@@ -4,19 +4,34 @@ classes: wide
 title:  "Understanding Nonlinearity"
 date:   2025-05-11
 permalink: /learning/understanding-nonlinearity
+tags: machine learning, thoughts
 ---
 
-A while ago, a friend showed me a [paper](https://arxiv.org/abs/2401.17992) introducting multilinear operator networks, or MONets for short. The introduction had a note about how some applications of deep learning architectures require different approaches to model nonlinearity. As a concrete example, they mention that certain encryption schemes for sensitive information (specifically LHFE) only supports addition and multiplication, and in particular do not support the nonlinear activation functions that are the bread and butter of neural networks. This blog post will be a collection of my own thoughts and musings on how nonlinearity appears within deep neural networks, and an overview of some ML literature that I've read in this area. 
+A while ago, a friend showed me a [paper](https://arxiv.org/abs/2401.17992) introducting multilinear operator networks, or MONets for short. The introduction had a note about how some applications of deep learning architectures require different approaches to model nonlinearity. As a concrete example, they mention that certain encryption schemes for sensitive information (specifically LHFE) only supports addition and multiplication, and in particular do not support the nonlinear activation functions that are the bread and butter of neural networks. The end resut of their paper was a novel architecture that is on part with state-of-the-art on image recognition. 
 
-If you have questions, comments, or suggestions, please do not hesitate to send me an email or leave a comment below.
+Something that struck me while reading the paper is that the cutting edge of deep learning is primarily heuristic driven--all too often the reason xyz is used in the model is because someone published a paper or ran an experiment that showed that it was better. Indeed, generally there are no theoretical reasons for any one model architecture (e.g. transformers) to be better than another for a given task, and I wish there existed some mathematical or statistical framework for concrete guarantees on the effectiveness for a given neural network. The unfortunate side effect of this is that as models and data scale up, it will become increasingly difficult and expensive to understand what reasonable expectations for a new framework should be, beyond some 'theoretical guarantee' that typically looks like 
+
+> For any $$\varepsilon > 0$$, there exists $$N \gg 0$$ such that a model with $$N$$ parameters will have loss at most $$\varepsilon$$ greater than the theoretical minimal loss. 
+
+I think that concrete understanding of large ML models will start from understanding how nonlinearity plays into the equation. This blog post will be a collection of my own thoughts and musings on how nonlinearity appears within deep neural networks, and an overview of some ML literature that I've read in this area. If you have questions, comments, or suggestions, please do not hesitate to send me an email or leave a comment below. Apologies in advance for potentially sketchy math.
 
 # High Level Overview
 Heuristically, the reason why deep learning works in modelling this data is because there exist highly nonlinear correlations within the data. For example, the training objective for an autoregressive text model (e.g. ChatGPT) is to predict the next token conditional on the last $$N$$ tokens, where usually $$N$$ is a large number--as of 2025, cutting edge language models support anywhere from 32 thousand to 10 million tokens of context. Fortunately for us, human language exhibits patterns on a large range of scales, from grammar at the sentence level, to logical arguments at the paragraph level, etc. so it's reasonable to assume that there are many nonlinear correlations that a model potentially could learn in order to  help it predict the next token.  One only needs to take a look at the [Wikipedia page](https://en.wikipedia.org/wiki/Natural_language_processing#History) for natural language processing to see that it is for these reasons that people have always believed language modelling to be a solvable problem. The real breakthough of the last decade has been the tools to build the right kind of large, nonlinear model that can effectively model these nonlinear functions.  
 
 As another example, we can also look in the world of computer vision. Deep convolutional networks and vision transformers are trained to recognize patterns on pixel level data, whether it be for denoising or for image recognition. As with the case of language modelling, this has [historical roots](https://en.wikipedia.org/wiki/Neocognitron) based off of the belief that there are many local-to-global patterns, within image data. Common heuristics that get mentioned when people learn about computer vision are things like edge detection at the pixel level, to object and character detection at a larger but local level, to describing entire images at a more global scale. 
 
-Unfortunately, getting the right framework to generate the nonlinearity is hard--stacking a bunch of layers with random initialization and training with the pytorch autograd will often land you in tricky situations such as gradient vanishing or gradient exploding. The issue is that by design, the model outputs will be a uniformly [Lipschitz](https://en.wikipedia.org/wiki/Lipschitz_continuity) function of the input data. 
- 
+Unfortunately, getting the right framework to generate the nonlinearity isn't a given--stacking a bunch of layers with random initialization and training with the pytorch autograd can land you in tricky situations such as gradient vanishing or gradient exploding. As a mathematical note, the ML model is a function from your data to the labels (e.g. next token, denoised image, ground truth, etc.)
+$$
+f_{model}: \mathbb{R}^{d_\text{data}} \rightarrow \mathbb{R}^{d_\text{labels}}
+$$
+whereas the loss landscape is the graph of the loss function $$\ell$$
+$$
+\ell : \mathbb{R}^{d_\text{model}} \rightarrow \mathbb{R}
+$$
+So that the model outputs will be always be a continuous, and in fact [Lipschitz](https://en.wikipedia.org/wiki/Lipschitz_continuity) function of the input data. The issue is that even though your model might theoretically be infinitely flexible and capable of modelling any function of the input space, there are no a priori guarantees that your model will have a favorable loss landscape for the problem that you are dealing with. Since the typical paradigm for training deep neural networks is some modification stochastic gradient descent, the gradient of the model parameters will be a random variable depending on the parameters themselves as well as the underlying data distribution. So a poorly designed model will have highly variable and fluctuating gradients between minibatches. Indeed, for any given minibatch, there could be many regions with bad gradient behavior.
+
+As an aside, a quick first test for your model design and initialization is to take a single minibatch and run gradient descent on only that minibatch. If your model converges reasonably quickly to an overfit, then you can be reasonably confident that you don't have issues within you minibatch. On the other hand if your model has performance issues, then it might be time to adjust some of your hyperparameters (e.g. learn rate, model design). 
+
 
 # Where Does Nonlinearity Live?
 

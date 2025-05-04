@@ -4,7 +4,7 @@ classes: wide
 title:  "Test Project post"
 date:   2025-04-30 
 permalink: /projects/test
-tags:
+tags: test, website
 ---
 
 This is the testing page for the project of making this website. I forked the minimal-mistakes jekyll theme in order to do some tweaks, such as
