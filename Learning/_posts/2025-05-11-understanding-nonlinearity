@@ -36,18 +36,61 @@ As an aside, a quick first test for your model design and initialization is to t
 
 
 # Where Does Nonlinearity Live?
-So, how do modern frameworks generate the nonlinearity needed? Modern neural networks often sandwich nonlinear layers between linear layers. This is because without the nonlinearity in between, the composition of two linear layers will simply be a computationally expensibe linear layer. 
+As a bit of an overgeneralization, deep neural networks alternate between nonlinear layers and linear layers--without the nonlinearity in between, the composition of two linear layers will simply be another linear layer. Of course, in practice modern architectures are  more complicated than just a stack of layers.
 
 ## Activation Functions
+The simplest way to have nonlinearity--we simply stick an elementwise activation function between 2 linear layers:
+<pre class="mermaid">
+flowchart LR
+    A["in"] -- Linear --> B("$$\mathbb{R}^{d_{mid}}$$")
+    B -- Nonlinear activation --> C("$$\mathbb{R}^{d_{mid}}$$")
+    C -- Linear --> D("out")
+</pre>
+There are a multitude of activation functions that we can choose from. During the early days of ML people preferred things like the sigmoid, but more modern architectures increasingly prefer the rectified linear unit (ReLU) and it's variants.
+- Sigmoid: $$\mathrm{sigmoid}(x) = \frac{1}{1 + e^{-x}}$$ (Note that up to scaling and shifting the input/output this is equivalent to $$\tanh$$)
+- ReLU: $$\mathrm{ReLU}(x) = \max(x,0)$$
+- Softplus: $$\mathrm{softplus}(x) = \ln(1 + e^x)$$
+- GELU: $$\mathrm{GELU}(x) = x\Phi(x)$$, where $$\Phi(x) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^x e^{t^2/2} dt$$ is the CDF of the standard normal distribution. 
+- SiLU (swish): $$\mathrm{SiLU}_\beta(x) = x  \cdot \mathrm{sigmoid}(\beta x)= \frac{x}{1 + e^{-\beta x}}$$ 
+
+There are also gated linear unit (GLU) variants that use 2 different separate linear layers to create the nonlinearity:
+<pre class="mermaid">
+flowchart LR
+    A["in"] -- linear --> x["x"] & z["z"]
+    x --> GLU
+    z --> GLU
+    GLU --> out
+</pre>
+Heuristically, this allows the model to 'learn' the activation functions via the linear layer that outputs $$z$$, but it is hard to say whether we get a real performance increase. Indeed, the original GLU [paper](https://arxiv.org/pdf/2002.05202) attributes the success to 'divine benevolence'.
+- GLU: $$\mathrm{GLU}_{z}(x) = (z) \cdot \mathrm{sigmoid}(x)$$
+- ReGLU: $$\mathrm{ReGLU}_{z}(x) = (z) \cdot \mathrm{ReLU}(x)$$
+- GEGLU: $$\mathrm{GEGLU}_{z}(x) = (\z) \cdot \mathrm{GELU}(x)$$
+- SwiGLU: $$\mathrm{SwiGLU}_{z, \beta}(x) = (z) \cdot \mathrm{SiLU}_{\beta}(x)$$
+Note that one can essentially define a GLU activation function for any given activation function above. 
 
 
 ## Layer Norm
+Another way nonlinearity is introduced into a model is via the layernorm operation. Suppose that $x \in \mathbb{R}^d$$ is some vector. Then the entry-wise mean $$\mu$$ and variance $$\sigma$$ can be found by the formulas
+$$
+\begin{split}
+\mu &= \frac{1}{d} \sum x_i\\
+\sigma^2 &= \frac{1}{d} \sum (x_i - \mu)^2
+$$
+Then we can write 
+$$ 
+\mathrm{LayerNorm}(x)_i = \frac{x_i - \mu}{\sqrt{\sigma^2 + \varepsilon}}
+$$
+Geometrically, what we are doing is first projecting $$x$$ down to the codimension 1 linear subspace $$ \{\sum x_i = 0\}\subset \mathbb{R}^d $$ and then projecting the output of that part down onto the sphere $$ S^{d-2} = \{ \sum x_i^2 = d \} \subset \{\sum x_i = 0\}$$ with a $$\varepsilon$$ regularizer for numerical stability. The former operation is linear, but the latter operation is much more nonlinear. 
 
+As an aside, I wonder if the first linear projection is truly necessary. After all, we are paying for a $$d$$-dimensional residual stream; why are we arbitrarily projecting out one dimension? If anyone has thoughts on the matter, or has a high quality reference with an answer, please leave a comment down below. I'll gladly venmo 5 dollars to the first person to leave a high quality reply. 
 
 ## Softmax
 
 
+
 ## Self-Attention
+
+The $$qk$$ component of self-attention is a second-order polynomial. 
 
 
 ## Polynomial Networks
