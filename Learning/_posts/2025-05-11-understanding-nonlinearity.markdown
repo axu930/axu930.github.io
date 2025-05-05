@@ -85,6 +85,7 @@ Geometrically, what we are doing is first projecting $$x$$ down to the codimensi
 As an aside, I wonder if the first linear projection is truly necessary. After all, we are paying for a $$d$$-dimensional residual stream; why are we arbitrarily projecting out one dimension? If anyone has thoughts on the matter, or has a high quality reference with an answer, please leave a comment down below. I'll gladly venmo 5 dollars to the first person to leave a high quality reply. 
 
 ## Softmax
+In self-attention, in 
 
 
 
